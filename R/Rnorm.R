@@ -1,6 +1,8 @@
 Rnorm = function(n, mu=0, sigma=1)
 {
-  Res = vector(length=n+1)
+  .Scalar1("Rnorm", n)
+
+  Res = numeric(n+1)
   i = 1
   while (i <= n) {
     x = runif(2)
@@ -12,6 +14,6 @@ Rnorm = function(n, mu=0, sigma=1)
       i = i + 2
     }
   }
-  return (Res[1:n])
+  return (Res[seq_len(n)])  # 1:n would count down at n = 0
 }
 

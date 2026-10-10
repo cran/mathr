@@ -1,6 +1,6 @@
 \name{Pbinom}
 \alias{Pbinom}
-\title{Cumulative probability of Poisson distribution}
+\title{Cumulative probability of binomial distribution}
 \description{
 Calculate the cumulative probability P(X <= k) of a binomial distribution
 }
@@ -11,7 +11,9 @@ Calculate the cumulative probability P(X <= k) of a binomial distribution
   \item{pe}{the probability of wanted event for a binomial distribution}
 }
 \details{
-It calculates the cumulative probability for k of a Poisson distribution.
+It calculates the cumulative probability for k of a binomial distribution.
+This function works a value at a time: \code{k}, \code{n} and \code{pe}
+must each be a single number. Use \code{sapply} for a vector.
 }
 \value{
   cumulative probability till k

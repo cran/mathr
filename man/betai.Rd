@@ -11,8 +11,10 @@ Incomplete beta function with parameter a and b
   \item{x}{to which it integrates}
 }
 \details{
-This calls \code{betaiapprox}, \code{betacf} and/or \code{gammln}.
-Ref: gsl_sf_beta_inc of the GNU Scientific Library, specfunc/beta_inc.c
+This calls \code{betacf} and \code{gammln}.
+Ref: gsl_sf_beta_inc of the GNU Scientific Library, specfunc/beta_inc.c.
+This function works a value at a time: \code{a}, \code{b} and \code{x} must
+each be a single number. Use \code{sapply} for a vector.
 }
 \value{
   integrated value

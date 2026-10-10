@@ -3,12 +3,14 @@
 
 Rgamma0 = function(n, alph, bet)
 {
+  .Scalar1("Rgamma0", alph)
+
   # The rejection condition below is vacuous for alph < 1: it accepts
   # every draw, which returns a scaled Exp(1) rather than a gamma. Use
   # Rgamma, which handles the whole range.
   stopifnot(alph >= 1, bet > 0)
-  Res = vector(length=n)
-  for (i in 1:n) {
+  Res = numeric(n)
+  for (i in seq_len(n)) {       # 1:n would count down at n = 0
     while (TRUE) {
       u = runif(2)
       v = -log(u)

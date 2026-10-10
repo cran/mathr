@@ -7,10 +7,12 @@ Another simple implementation of combination function like \code{choose}
 \usage{Choose(n, r)}
 \arguments{
   \item{n}{total count}
-  \item{r}{cont to choose}
+  \item{r}{count to choose}
 }
 \details{
-This is simple but not easily overflowed version of combination function.
+This is a simple version of the combination function that does not overflow easily.
+This function works a value at a time: \code{n} and \code{r} must each be a
+single number. Use \code{sapply} for a vector.
 }
 \value{
   combination of choosing r cases from n cases.

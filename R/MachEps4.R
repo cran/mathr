@@ -1,10 +1,13 @@
 MachEps4 = function(MaxIter=1000)
 {
+  .Scalar1("MachEps4", MaxIter)
+
   lb = -1 # upper bound
   ub = 0 # lower bound
   NextEps = (lb + ub)/2
 
   i = 0  # iteration number
+  CurEps = NextEps  # what MaxIter = 0 returns
   while (NextEps != lb & NextEps != ub & i < MaxIter) {
     i = i + 1
     CurEps = NextEps

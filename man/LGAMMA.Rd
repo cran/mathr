@@ -2,8 +2,8 @@
 \alias{LGAMMA}
 \title{Natural Log Gamma Function}
 \description{
-This log gamma function is for a larger value of real numbers.
-This function uses Lanczos' approximation and fairly short.
+This log gamma function is for larger real values, beyond the range of \code{GAMMA}.
+This function uses Lanczos' approximation and is fairly short.
 }
 \usage{LGAMMA(z)}
 \arguments{
@@ -11,6 +11,9 @@ This function uses Lanczos' approximation and fairly short.
 }
 \details{
 If abs(z) is less than or equal to 171, it uses GAMMA function.
+Ref: Lanczos g=7 coefficients as used by the GNU Scientific Library, gsl_sf_lngamma.
+This function works a value at a time: \code{z} must be a single number.
+Use \code{sapply} for a vector.
 }
 \value{
 natural log value of Gamma function

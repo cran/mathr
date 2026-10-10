@@ -3,14 +3,17 @@
 \title{Gamma Function}
 \description{
 This gamma function is a generalization of factorial working with real numbers.
-This function uses Lanczos' approximation and fairly short.
+This function uses Lanczos' approximation and is fairly short.
 }
 \usage{GAMMA(z)}
 \arguments{
   \item{z}{real number}
 }
 \details{
-  If x is an integer, GAMMA(x) = (x - 1)!. If x is a negative integer, it returns +Inf.
+  If z is a positive integer, GAMMA(z) = (z - 1)!. If z is zero or a negative integer, it returns +Inf.
+Ref: Lanczos g=7 coefficients as used by the GNU Scientific Library, gsl_sf_lngamma.
+This function works a value at a time: \code{z} must be a single number.
+Use \code{sapply} for a vector.
 }
 \value{
   Gamma function real value

@@ -1,15 +1,16 @@
 \name{Run.test}
 \alias{Run.test}
-\title{Probability for Run Test}
+\title{Run test on a sequence}
 \description{
 p-value for run test
 }
 \usage{Run.test(RES)}
 \arguments{
-  \item{RES}{sequence vector to be tested, usually residual values)}
+  \item{RES}{sequence vector to be tested, usually residual values}
 }
 \details{
-It calculates p-value for run test. Zeros are omitted first.
+It calculates p-value for run test. Zeros are omitted first. If no
+nonzero value is left, there are no runs to count and it returns NA.
 }
 \value{
 p-value, if it is larger than 0.5, it returns 1 - p.  

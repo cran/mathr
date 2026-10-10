@@ -2,7 +2,7 @@
 \alias{Dbinom}
 \title{Density of binomial distribution}
 \description{
-Calculate the mass for n of a binomial distribution
+Calculate the mass for k of a binomial distribution
 }
 \usage{Dbinom(k, n, pe)}
 \arguments{
@@ -12,6 +12,8 @@ Calculate the mass for n of a binomial distribution
 }
 \details{
 It calculates the probability for count k of a binomial distribution.
+This function works a value at a time: \code{k}, \code{n} and \code{pe}
+must each be a single number. Use \code{sapply} for a vector.
 }
 \value{
   probability for k

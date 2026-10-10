@@ -12,9 +12,11 @@ Calculate the x value for the cumulative probability p of a beta distribution
 }
 \details{
 It calculates the x value for the cumulative probability p of a beta distribution.
+This function works a value at a time: \code{p}, \code{alph} and \code{bet}
+must each be a single number. Use \code{sapply} for a vector.
 }
 \value{
-  x of \code{Pt(x, alph, bet)}
+  x of \code{Pbeta(x, alph, bet)}
 }
 \examples{
 Qbeta(0.5, 2, 3)

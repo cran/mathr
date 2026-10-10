@@ -8,10 +8,12 @@ Calculate the density of a gamma distribution
 \arguments{
   \item{x}{x value for a gamma distribution}
   \item{alph}{the shape parameter alpha of a gamma distribution}
-  \item{bet}{the shape parameter beta of a gamma distribution}
+  \item{bet}{the rate parameter beta of a gamma distribution}
 }
 \details{
 It calculates the density for x value of a gamma distribution.
+This function works a value at a time: \code{x}, \code{alph} and \code{bet}
+must each be a single number. Use \code{sapply} for a vector.
 }
 \value{
   density for x

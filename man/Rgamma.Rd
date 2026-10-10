@@ -8,10 +8,11 @@ Generate random numbers from a gamma distribution
 \arguments{
   \item{n}{count, how many do you want}
   \item{alph}{shape parameter alpha of a gamma distribution}
-  \item{bet}{shape parameter beta of a gamma disribution}
+  \item{bet}{scale parameter beta of a gamma distribution}
 }
 \details{
 It uses acceptance-rejection method.
+\code{alph} must be a single number, not a vector.
 }
 \value{
   a vector of random numbers

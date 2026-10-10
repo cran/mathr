@@ -9,9 +9,11 @@ Error function.
   \item{x}{a real value}
 }
 \details{
-This calls \code{erfccheb}.
+This calls \code{gammp}.
 
-Ref: erf(x) = P(1/2, x^2), the relation the GNU Scientific Library uses between gsl_sf_erf and gsl_sf_gamma_inc_P
+Ref: erf(x) = P(1/2, x^2), the relation the GNU Scientific Library uses between gsl_sf_erf and gsl_sf_gamma_inc_P.
+This function works a value at a time: \code{x} must be a single number.
+Use \code{sapply} for a vector.
 }
 \value{
   Integration value \eqn{ \frac{2}{\sqrt{\pi}} \int_{0}^{x} e^{-t^2} dt }

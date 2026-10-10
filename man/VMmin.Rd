@@ -2,7 +2,7 @@
 \alias{VMmin}
 \title{Simplified version of optimization function}
 \description{
-To show the algorithm how quasi-Newton type optimization algorithm works. 
+Shows how a quasi-Newton type optimization algorithm works.
 }
 \usage{VMmin(x0, func, MaxIter=9999, Tol=1e-4)}
 \arguments{
@@ -13,6 +13,7 @@ To show the algorithm how quasi-Newton type optimization algorithm works.
 }
 \details{
 If the changes of between steps are less than the tolerances, it stops.
+\code{MaxIter} and \code{Tol} must each be a single number, not a vector.
 }
 \value{
   \item{par}{final x vector values}

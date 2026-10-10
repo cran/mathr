@@ -2,17 +2,19 @@
 \alias{romb}
 \title{Integration using Romberg integration}
 \description{
-Integrates with given fx, a, b, and n
+Integrates with given fx, a, b, and N
 }
 \usage{romb(fx, a, b, N=4)}
 \arguments{
   \item{fx}{real valued scalar function}
   \item{a}{from}
   \item{b}{to}
-  \item{N}{degree; the larger, the precise}
+  \item{N}{degree; the larger, the more precise}
 }
 \details{
-This gives approximate integration value using Romberg integration. Argument N should larger than 2.
+This gives approximate integration value using Romberg integration. N is
+the number of rows of the Romberg table; N = 1 is the trapezoidal rule
+over the whole interval. \code{N} must be a single number, not a vector.
 }
 \value{
   Integration value from a to b with function.

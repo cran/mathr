@@ -9,7 +9,10 @@ Square-rooting of a real positive number.
   \item{x}{a real positive number to be square-rooted}
 }
 \details{
+Current CPUs support this function at the instruction level, so this implementation is for study rather than for speed.
 Ref. Plauger PJ The Standard C Library. 1992.
+This function works a value at a time: \code{x} must be a single number.
+Use \code{sapply} for a vector.
 }
 \value{
   square-rooted value

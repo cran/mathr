@@ -2,7 +2,7 @@
 \alias{Optim0}
 \title{Prototype of optimization function}
 \description{
-To show the algorithm how quasi-Newton type optimization algorithm works. 
+Shows how a quasi-Newton type optimization algorithm works.
 }
 \usage{Optim0(x0, func, TypF=1, GradTol=.Machine$double.eps^(1/3), 
               StepTol=.Machine$double.eps^(2/3), 
@@ -10,7 +10,7 @@ To show the algorithm how quasi-Newton type optimization algorithm works.
 \arguments{
   \item{x0}{initial value}
   \item{func}{function to be minimized}
-  \item{TypF}{typical function value, a scalar, to measure approximate maginitude}
+  \item{TypF}{typical function value, a scalar, to measure approximate magnitude}
   \item{GradTol}{gradient tolerance}
   \item{StepTol}{x direction or step tolerance}
   \item{FnTol}{y or function tolerance}
@@ -18,6 +18,8 @@ To show the algorithm how quasi-Newton type optimization algorithm works.
 }
 \details{
 If the changes of between steps are less than the tolerances, it stops.
+\code{GradTol}, \code{StepTol}, \code{FnTol} and \code{ItnLimit} must each
+be a single number, not a vector.
 }
 \value{
   \item{par}{final x vector values}

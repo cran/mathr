@@ -6,10 +6,12 @@ This function returns factorial value from the stored table.
 }
 \usage{tableFactorial(n)}
 \arguments{
-  \item{n}{positive integer to be calculated}
+  \item{n}{non-negative integer to be calculated}
 }
 \details{
 This function returns factorial value from the table known to be precise.
+This function works a value at a time: \code{n} must be a single number.
+Use \code{sapply} for a vector.
 }
 \value{
   factorial value

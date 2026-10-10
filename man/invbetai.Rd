@@ -1,18 +1,20 @@
 \name{invbetai}
 \alias{invbetai}
-\title{Inverse of gammap function}
+\title{Inverse of incomplete beta function}
 \description{
 Inverse of incomplete beta function with parameter a and b
 }
 \usage{invbetai(p, a, b)}
 \arguments{
   \item{p}{integration value between 0 and 1}
-  \item{a}{shape constrant, distribution parameter}
-  \item{b}{shape constrant, distribution parameter}
+  \item{a}{shape constant, distribution parameter}
+  \item{b}{shape constant, distribution parameter}
 }
 \details{
-This calls \code{gammln} and \code{betai}
-Ref: bracketed Newton steps on betai, following gsl_cdf_beta_Pinv of the GNU Scientific Library
+This calls \code{gammln} and \code{betai}.
+Ref: bracketed Newton steps on betai, following gsl_cdf_beta_Pinv of the GNU Scientific Library.
+This function works a value at a time: \code{p}, \code{a} and \code{b} must
+each be a single number. Use \code{sapply} for a vector.
 }
 \value{
   inverse of incomplete beta function

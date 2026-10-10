@@ -8,10 +8,11 @@ Generate random numbers from a multivariate normal distribution
 \arguments{
   \item{n}{count, how many do you want}
   \item{Mu}{mean vector of multivariate normal distribution}
-  \item{Cov}{variance-covariance matrix of multivariate normal disribution}
+  \item{Cov}{variance-covariance matrix of multivariate normal distribution}
 }
 \details{
-It uses cholesky decomposition.
+It uses Cholesky decomposition.
+\code{n} must be a single number, not a vector.
 }
 \value{
   a matrix of random vectors

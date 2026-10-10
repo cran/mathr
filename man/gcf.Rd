@@ -10,8 +10,10 @@ Continued fraction approximation of incomplete gamma function, Q(a, x)
   \item{x}{to which it integrates}
 }
 \details{
-This calls \code{gammaln}.
-Ref: Abramowitz and Stegun 6.5.31; Cephes igamc, as redistributed in ALGLIB specialfunctions.cs
+This calls \code{gammln}.
+Ref: Abramowitz and Stegun 6.5.31; Cephes igamc, as redistributed in ALGLIB specialfunctions.cs.
+This function works a value at a time: \code{a} and \code{x} must each be a
+single number. Use \code{sapply} for a vector.
 }
 \value{
   integrated value

@@ -1,10 +1,20 @@
 SQRT = function(x)
 {
-  if (x < 0) {
+  .Scalar1("SQRT", x)
+
+  if (is.nan(x)) {
+    warning ("Input is NaN.")
+    return (NaN)
+  } else if (is.na(x)) {
+    return (NA_real_)
+  } else if (x < 0) {
     warning("NaN produced")
     return (NaN)
   } else if (x == 0) {
     return (0)
+  } else if (x == +Inf) {
+    warning ("Input is +Inf.")
+    return (+Inf)
   } else {
     Norm = NORM(x)
     x1 = Norm[1]

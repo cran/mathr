@@ -13,6 +13,8 @@ Multiple linear regression.
 }
 \details{
 It shows various outputs.
+\code{standardize} and \code{Plot} must each be a single value, not a
+vector.
 }
 \value{
   \item{Variable}{variable names}
@@ -21,11 +23,11 @@ It shows various outputs.
   \item{T}{t value}
   \item{p-value}{p-value}
   \item{Residual}{residuals}
-  \item{R-student}{externally studentized residuals}
+  \item{R-Student}{externally studentized residuals}
   \item{hat}{hat value}
   \item{Cook's D}{Cook's D}
-  \item{Covratio}{Covratio}
-  \item{DIFFITS}{DIFFITS}
+  \item{COV-Ratio}{covariance ratio}
+  \item{DFFITS}{DFFITS}
   \item{DFBETAs}{DFBETAs}
 }
 \examples{

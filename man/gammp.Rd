@@ -1,6 +1,6 @@
 \name{gammp}
 \alias{gammp}
-\title{Incomplete gamma function}
+\title{Regularized lower incomplete gamma function P(a, x)}
 \description{
 Incomplete gamma function with parameter a
 }
@@ -10,8 +10,10 @@ Incomplete gamma function with parameter a
   \item{x}{to which it integrates}
 }
 \details{
-This calls \code{gser} or \code{gammpapprox}.
-Ref: Cephes igam/igamc, as redistributed in ALGLIB specialfunctions.cs
+This calls \code{gser} or \code{gcf}.
+Ref: Cephes igam/igamc, as redistributed in ALGLIB specialfunctions.cs.
+This function works a value at a time: \code{a} and \code{x} must each be a
+single number. Use \code{sapply} for a vector.
 }
 \value{
   integrated value

@@ -7,10 +7,12 @@ Calculate the mass for n of a Poisson distribution
 \usage{Dpois(n, lam)}
 \arguments{
   \item{n}{count n for a Poisson distribution}
-  \item{lam}{shape parameter lambda of a Poisson distribution}
+  \item{lam}{mean lambda of a Poisson distribution}
 }
 \details{
 It calculates the mass for n of a Poisson distribution.
+This function works a value at a time: \code{n} and \code{lam} must each be
+a single number. Use \code{sapply} for a vector.
 }
 \value{
   mass (probability) for n

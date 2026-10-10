@@ -12,7 +12,8 @@ Integrates with given fx, a, b, and n
   \item{n}{split count}
 }
 \details{
-This gives approximate integration value using Simpson's 3/8 formula. Argument n should a multiple of 3.
+This gives approximate integration value using Simpson's 3/8 formula. Argument n should be a multiple of 3.
+\code{n} must be a single number, not a vector.
 }
 \value{
   Integration value from a to b with function.

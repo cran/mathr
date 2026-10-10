@@ -7,10 +7,12 @@ Calculate the density of a chi-square distribution
 \usage{Dchisq(x2, nu)}
 \arguments{
   \item{x2}{chi-square value for a chi-square distribution}
-  \item{nu}{the shape parameter nu of a chi-square distribution}
+  \item{nu}{degrees of freedom nu of a chi-square distribution}
 }
 \details{
-It calculates the density for chi-sqaure value of a chi-square distribution.
+It calculates the density for chi-square value of a chi-square distribution.
+This function works a value at a time: \code{x2} and \code{nu} must each be
+a single number. Use \code{sapply} for a vector.
 }
 \value{
   density for x2

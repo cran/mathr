@@ -1,5 +1,7 @@
 Optim0 = function(x0, func, TypF=1, GradTol=.Machine$double.eps^(1/3), StepTol=.Machine$double.eps^(2/3), FnTol=.Machine$double.eps^(1/3), ItnLimit=100)
 {
+  .Scalar1("Optim0", GradTol, StepTol, FnTol, ItnLimit)
+
   DimX = length(x0)
   TypX = rep(1, DimX)
 #  Dx   = diag(1, DimX)
@@ -20,6 +22,8 @@ Optim0 = function(x0, func, TypF=1, GradTol=.Machine$double.eps^(1/3), StepTol=.
 
   x[1,] = x0
   StopFlag = 0
+  RelStep = NA  # both need a previous step, so they stay NA when the
+  DelF = NA     # loop ends on its first iteration
 
   for (i in 1:ItnLimit) {
     gH      = GenD(func, x[i,])
